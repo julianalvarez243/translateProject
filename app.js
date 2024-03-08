@@ -74,19 +74,21 @@ function traducirTexto() {
   fetch(url, options)
   .then(response => 
     response.json(),
+    estadoTraduciendo.style.display = 'block',
     estadoTraduciendo.innerHTML = `<p>Traduciendo texto...</p>`
+
   )
   .then(response => {
     textoTraducido = response.data.translatedText;
     areaTraducido.innerHTML = textoTraducido;
     estadoTraduciendo.innerHTML = `<p>Texto traducido ✅</p>`
     setTimeout(() => {
-      estadoTraduciendo.remove();      
+        estadoTraduciendo.style.display = 'none';
     }, 2000)
     
   })
   .catch(err => {
-    estadoTraduciendo.innerHTML = `<p>Error ❌. ${err} </p>`
+    estadoTraduciendo.innerHTML = `<p>Error ❌ Seleccione ambos idiomas. </p>`
   });
 };
 

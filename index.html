@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Projecto traductor</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="main">
+                <div class="idiomaOrigen">
+                    <label for="">Idioma origen</label>
+                        <select name="languageFrom" id="languageFrom">
+                            <option value="Idioma">Idioma</option>
+                        </select> <br>
+                    <textarea name="originalText" id="originalText" cols="30" rows="10" placeholder="Ingrese el texto a traducir"></textarea>
+                </div>
+                <button onclick="traducirTexto()" id="btonTraductor">Traducir</button>
+                <div class="idiomaDestino">
+                    <label for="">Idioma destino</label>
+                        <select name="languageTo" id="languageTo">
+                            <option value="Idioma">Idioma</option>
+                        </select> <br>
+                    <textarea readonly name="traducedText" id="traducedText" cols="30" rows="10" placeholder="Texto traducido..."></textarea>
+                </div>
+                
+            </div>
+            <div class="mensajeEstado" id="mensajeEstado">
+                <p>Mensaje de prueba</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

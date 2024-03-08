@@ -1,0 +1,24 @@
+body {
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+.main {
+    width: 80%;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+
+button#btonTraductor {
+    background-color: aqua;
+}
+
+.mensajeEstado {
+    margin: 0 auto;
+    text-align: center;
+}
